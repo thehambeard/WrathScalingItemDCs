@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WrathScalingItemDCs", "WrathScalingItemDCs\WrathScalingItemDCs.csproj", "{6C7D5DD0-BF98-46DB-AA43-5701AE1E83BE}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WrathHamCore", "..\WrathHamCore\WrathHamCore\WrathHamCore.shproj", "{AABE0D82-588A-4F89-BE22-3D02F4715500}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{868C0EDF-8A0E-4070-AC7D-0EB5A616FF05}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		Repository.json = Repository.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C7D5DD0-BF98-46DB-AA43-5701AE1E83BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C7D5DD0-BF98-46DB-AA43-5701AE1E83BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C7D5DD0-BF98-46DB-AA43-5701AE1E83BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C7D5DD0-BF98-46DB-AA43-5701AE1E83BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {282C7F24-C360-488E-916B-1FC8FC501A8D}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\WrathHamCore\WrathHamCore\WrathHamCore.projitems*{6c7d5dd0-bf98-46db-aa43-5701ae1e83be}*SharedItemsImports = 5
+		..\WrathHamCore\WrathHamCore\WrathHamCore.projitems*{aabe0d82-588a-4f89-be22-3d02f4715500}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal

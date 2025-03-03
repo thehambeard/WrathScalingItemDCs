@@ -1,0 +1,12 @@
+﻿{
+  "Id": "WrathScalingItemDCs",
+  "DisplayName": "ScalingItemDCs",
+  "Author": "",
+  "Version": "1.0.0",
+  "ManagerVersion": "0.27.11",
+  "Requirements": [],
+  "AssemblyName": "WrathScalingItemDCs.dll",
+  "EntryMethod": "WrathScalingItemDCs.Main.Load",
+  "HomePage": "",
+  "Repository": ""
+}
