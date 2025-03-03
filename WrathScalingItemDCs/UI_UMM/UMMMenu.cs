@@ -1,7 +1,9 @@
 ﻿using System;
 using UnityModManagerNet;
 using WrathHamCore.Utility.Initialization;
+#if DEBUG
 using WrathScalingItemDCs.ScalingDC.Debug;
+#endif
 using WrathScalingItemDCs.Settings;
 using GL = UnityEngine.GUILayout;
 namespace WrathScalingItemDCs.UI_UMM;
