@@ -1,5 +1,6 @@
 ﻿using Kingmaker.Settings;
 using System;
+using UnityEngine;
 
 namespace WrathScalingItemDCs.Settings
 {
@@ -8,11 +9,20 @@ namespace WrathScalingItemDCs.Settings
         public int GetModifier(int orginalDc);
     }
 
+    public enum ScaleSettingDifficulty
+    {
+        Normal,
+        Hard,
+        Unfair,
+    }
+
     public abstract class ScalingSettingBase<T> : IScaleSetting
     {
         public T Normal;
         public T Hard;
         public T Unfair;
+
+        public ScaleSettingDifficulty Difficulty = ScaleSettingDifficulty.Normal;
 
         protected ScalingSettingBase()
         {
@@ -37,10 +47,10 @@ namespace WrathScalingItemDCs.Settings
 
         public override int GetModifier(int orginalDC)
         {
-            int result = SettingsRoot.Difficulty.GameDifficulty.GetValue() switch
+            int result = Difficulty switch
             {
-                GameDifficultyOption.Unfair => orginalDC + Unfair,
-                GameDifficultyOption.Hard => orginalDC + Hard,
+                ScaleSettingDifficulty.Unfair => orginalDC + Unfair,
+                ScaleSettingDifficulty.Hard => orginalDC + Hard,
                 _ => orginalDC + Normal
             };
 
@@ -56,14 +66,44 @@ namespace WrathScalingItemDCs.Settings
 
         public override int GetModifier(int orginalDC)
         {
-            int result = SettingsRoot.Difficulty.GameDifficulty.GetValue() switch
+            int result = Difficulty switch
             {
-                GameDifficultyOption.Unfair => (int)Math.Round(orginalDC + (orginalDC * Unfair)),
-                GameDifficultyOption.Hard => (int)Math.Round(orginalDC + (orginalDC * Hard)),
-                _ => (int)Math.Round(orginalDC + (orginalDC * Normal))
+                ScaleSettingDifficulty.Unfair => (int)(orginalDC + (orginalDC * Unfair)),
+                ScaleSettingDifficulty.Hard => (int)(orginalDC + (orginalDC * Hard)),
+                _ => (int)(orginalDC + (orginalDC * Normal))
             };
 
             return result;
         }
+    }
+
+    public class ScaleSettingDiminishingReturns : ScalingSettingBase<(float, float, float)>, IScaleSetting
+    {
+        public ScaleSettingDiminishingReturns() : base() { }
+
+        public ScaleSettingDiminishingReturns((float, float, float) normal, (float, float, float) hard, (float, float, float) unfair) : base(normal, hard, unfair) { }
+
+        public override int GetModifier(int orginalDC)
+        {
+            int result = Difficulty switch
+            {
+                ScaleSettingDifficulty.Unfair => (int)DiminishingReturns(orginalDC, Unfair),
+                ScaleSettingDifficulty.Hard => (int)DiminishingReturns(orginalDC, Hard),
+                _ => (int)DiminishingReturns(orginalDC, Normal),
+            };
+
+            return result;
+        }
+
+        public static int DiminishingReturns(double inputValue, double a, double b, double c)
+        {
+            return (int)(inputValue + ((inputValue + b) / (inputValue * a) + c));
+        }
+        
+        public static int DiminishingReturns(double inputValue, (double a, double b, double c) values) =>
+            DiminishingReturns(inputValue, values.a, values.b, values.c);
+        
+
+
     }
 }

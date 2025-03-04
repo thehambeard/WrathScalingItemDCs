@@ -61,6 +61,14 @@ namespace WrathScalingItemDCs.Settings
             Hard = 5,
             Unfair = 7
         };
+        
+        [JsonProperty]
+        public ScaleSettingDiminishingReturns ScaleSettingDiminishingReturns { get; set; } = new ScaleSettingDiminishingReturns()
+        {
+            Normal = (.24f, 9f, -3.7f),
+            Hard = (.24f, 9f, -3.7f),
+            Unfair = (.24f, 9f, -3.7f)
+        };
 
         private JsonSerializerSettings _jsonSettings = new JsonSerializerSettings
         {
@@ -88,6 +96,8 @@ namespace WrathScalingItemDCs.Settings
                         _instance.CurrentSetting = _instance.ScaleSettingPercent;
                     else if (_instance.CurrentSettingType == typeof(ScaleSettingFlat))
                         _instance.CurrentSetting = _instance.ScaleSettingFlat;
+                    else if (_instance.CurrentSettingType == typeof(ScaleSettingDiminishingReturns))
+                        _instance.CurrentSetting = _instance.ScaleSettingDiminishingReturns;
                 }
             }
             catch (Exception ex)
@@ -106,6 +116,8 @@ namespace WrathScalingItemDCs.Settings
                 _instance.CurrentSettingType = typeof(ScaleSettingPercent);
             else if (_instance.CurrentSetting.GetType() == typeof(ScaleSettingFlat))
                 _instance.CurrentSettingType = typeof(ScaleSettingFlat);
+            else if (_instance.CurrentSetting.GetType() == typeof(ScaleSettingDiminishingReturns))
+                _instance.CurrentSettingType = typeof(ScaleSettingDiminishingReturns);
 
             var json = JsonConvert.SerializeObject(_instance, Formatting.Indented, _jsonSettings);
             File.WriteAllText(path, json);
