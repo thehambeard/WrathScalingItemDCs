@@ -49,25 +49,25 @@ namespace WrathScalingItemDCs.Settings
         [JsonProperty]
         public ScaleSettingPercent ScaleSettingPercent { get; set; } = new ScaleSettingPercent()
         {
-            Normal = .1f,
-            Hard = .15f,
-            Unfair = .2f
+            Preset1 = .1f,
+            Preset2 = .15f,
+            Preset3 = .2f
         };
 
         [JsonProperty]
         public ScaleSettingFlat ScaleSettingFlat { get; set; } = new ScaleSettingFlat()
         {
-            Normal = 3,
-            Hard = 5,
-            Unfair = 7
+            Preset1 = 3,
+            Preset2 = 5,
+            Preset3 = 7
         };
         
         [JsonProperty]
         public ScaleSettingDiminishingReturns ScaleSettingDiminishingReturns { get; set; } = new ScaleSettingDiminishingReturns()
         {
-            Normal = (.24f, 9f, -3.7f),
-            Hard = (.24f, 9f, -3.7f),
-            Unfair = (.24f, 9f, -3.7f)
+            Preset1 = (.24f, 9f, -3.7f),
+            Preset2 = (.24f, 9f, -3.7f),
+            Preset3 = (.24f, 9f, -3.7f)
         };
 
         private JsonSerializerSettings _jsonSettings = new JsonSerializerSettings

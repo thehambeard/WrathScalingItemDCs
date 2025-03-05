@@ -7,55 +7,64 @@ namespace WrathScalingItemDCs.Settings
     public interface IScaleSetting
     {
         public int GetModifier(int orginalDc);
+        public ScaleSettingPreset GetPreset();
+        public void SetPreset(ScaleSettingPreset preset);
     }
 
-    public enum ScaleSettingDifficulty
+    public enum ScaleSettingPreset
     {
-        Normal,
-        Hard,
-        Unfair,
+        Preset1,
+        Preset2,
+        Preset3,
     }
 
     public abstract class ScalingSettingBase<T> : IScaleSetting
     {
-        public T Normal;
-        public T Hard;
-        public T Unfair;
+        public T Preset1;
+        public T Preset2;
+        public T Preset3;
 
-        public ScaleSettingDifficulty Difficulty = ScaleSettingDifficulty.Normal;
+        public ScaleSettingPreset Preset = ScaleSettingPreset.Preset1;
 
         protected ScalingSettingBase()
         {
 
         }
 
-        protected ScalingSettingBase(T normal, T hard, T unfair)
+        protected ScalingSettingBase(T preset1, T preset2, T preset3)
         {
-            Normal = normal;
-            Hard = hard;
-            Unfair = unfair;
+            Preset1 = preset1;
+            Preset2 = preset2;
+            Preset3 = preset3;
         }
 
         public abstract int GetModifier(int orginalDC);
+
+        public ScaleSettingPreset GetPreset() => Preset;
+
+        public void SetPreset(ScaleSettingPreset preset) => Preset = preset;
     }
 
     public class ScaleSettingFlat : ScalingSettingBase<int>, IScaleSetting
     {
         public ScaleSettingFlat() : base() { }
 
-        public ScaleSettingFlat(int normal, int hard, int unfair) : base(normal, hard, unfair) { }
+        public ScaleSettingFlat(int preset1, int preset2, int preset3) : base(preset1, preset2, preset3) { }
 
         public override int GetModifier(int orginalDC)
         {
-            int result = Difficulty switch
+            int result = Preset switch
             {
-                ScaleSettingDifficulty.Unfair => orginalDC + Unfair,
-                ScaleSettingDifficulty.Hard => orginalDC + Hard,
-                _ => orginalDC + Normal
+                ScaleSettingPreset.Preset3 => Flat(orginalDC, Preset3),
+                ScaleSettingPreset.Preset2 => Flat(orginalDC, Preset2),
+                _ => Flat(orginalDC, Preset1)
             };
 
             return result;
         }
+
+        public static int Flat(int inputValue, int flatRate) =>
+            inputValue + flatRate;
     }
 
     public class ScaleSettingPercent : ScalingSettingBase<float>, IScaleSetting
@@ -66,15 +75,18 @@ namespace WrathScalingItemDCs.Settings
 
         public override int GetModifier(int orginalDC)
         {
-            int result = Difficulty switch
+            int result = Preset switch
             {
-                ScaleSettingDifficulty.Unfair => (int)(orginalDC + (orginalDC * Unfair)),
-                ScaleSettingDifficulty.Hard => (int)(orginalDC + (orginalDC * Hard)),
-                _ => (int)(orginalDC + (orginalDC * Normal))
+                ScaleSettingPreset.Preset3 => Percentage(orginalDC, Preset3),
+                ScaleSettingPreset.Preset2 => Percentage(orginalDC, Preset2),
+                _ => Percentage(orginalDC, Preset1)
             };
 
             return result;
         }
+
+        public static int Percentage (int inputValue, float percentage) =>
+            (int)(inputValue + (inputValue * percentage));
     }
 
     public class ScaleSettingDiminishingReturns : ScalingSettingBase<(float, float, float)>, IScaleSetting
@@ -85,22 +97,22 @@ namespace WrathScalingItemDCs.Settings
 
         public override int GetModifier(int orginalDC)
         {
-            int result = Difficulty switch
+            int result = Preset switch
             {
-                ScaleSettingDifficulty.Unfair => (int)DiminishingReturns(orginalDC, Unfair),
-                ScaleSettingDifficulty.Hard => (int)DiminishingReturns(orginalDC, Hard),
-                _ => (int)DiminishingReturns(orginalDC, Normal),
+                ScaleSettingPreset.Preset3 => DiminishingReturns(orginalDC, Preset3),
+                ScaleSettingPreset.Preset2 => DiminishingReturns(orginalDC, Preset2),
+                _ => DiminishingReturns(orginalDC, Preset1),
             };
 
             return result;
         }
 
-        public static int DiminishingReturns(double inputValue, double a, double b, double c)
+        public static int DiminishingReturns(int inputValue, double a, double b, double c)
         {
             return (int)(inputValue + ((inputValue + b) / (inputValue * a) + c));
         }
         
-        public static int DiminishingReturns(double inputValue, (double a, double b, double c) values) =>
+        public static int DiminishingReturns(int inputValue, (double a, double b, double c) values) =>
             DiminishingReturns(inputValue, values.a, values.b, values.c);
         
 
