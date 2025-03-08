@@ -49,8 +49,15 @@ public static class UMMMenu
 
         _currentOnGUI?.Invoke();
 
-        if (GL.Button("Save", GL.Width(200)))
-            GlobalSettings.Instance.Save();
+        GL.Label("IMPORTANT: You must hit save even after changing your preset!");
+
+        using (new GL.HorizontalScope())
+        {
+            if (GL.Button("Save", GL.Width(200)))
+                GlobalSettings.Instance.Save();
+            if (GL.Button("Revert", GL.Width(200)))
+                GlobalSettings.Load();
+        }
     }
 
     private delegate bool TryParseHandler<T>(string s, out T result);
@@ -136,7 +143,7 @@ public static class UMMMenu
 
         using (new GL.VerticalScope())
         {
-            GL.Label("Diminished Return f(x) = (x + b) / (x * a) + c)");
+            GL.Label("Diminished Return f(x) = ((x + b) / (x * a) + c)");
             GL.Label("This setting will increase the original DC by a variable amount. The lower the DC the bigger the bonus");
             DrawDifficultySettingTuple(
                 ScaleSettingPreset.Preset1,

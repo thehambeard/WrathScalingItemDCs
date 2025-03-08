@@ -28,22 +28,31 @@ namespace WrathScalingItemDCs.Settings
         public static void Initialize()
         {
             Load();
-
-            if (_instance.CurrentSetting == null)
-                _instance.CurrentSetting = _instance.ScaleSettingPercent;
         }
 
         public GlobalSettings()
         {
-
+            CurrentSetting ??= ScaleSettingDiminishingReturns;
         }
 
         [JsonProperty]
-        public Type CurrentSettingType { get; set; } = typeof(ScaleSettingPercent);
+        public const string SettingsVersion = "v2";
 
+        [JsonProperty]
+        public Type CurrentSettingType { get; set; }
+
+        private IScaleSetting _currentSetting;
 
         [JsonIgnore]
-        public IScaleSetting CurrentSetting { get; set; }
+        public IScaleSetting CurrentSetting
+        {
+            get => _currentSetting;
+            set
+            {
+                _currentSetting = value;
+                CurrentSettingType = value.GetType();
+            }
+        }
 
 
         [JsonProperty]
@@ -61,13 +70,13 @@ namespace WrathScalingItemDCs.Settings
             Preset2 = 5,
             Preset3 = 7
         };
-        
+
         [JsonProperty]
         public ScaleSettingDiminishingReturns ScaleSettingDiminishingReturns { get; set; } = new ScaleSettingDiminishingReturns()
         {
             Preset1 = (.24f, 9f, -3.7f),
-            Preset2 = (.24f, 9f, -3.7f),
-            Preset3 = (.24f, 9f, -3.7f)
+            Preset2 = (.261f, 33.1f, -6.6f),
+            Preset3 = (.39f, 61.2f, 1.6f)
         };
 
         private JsonSerializerSettings _jsonSettings = new JsonSerializerSettings
@@ -82,12 +91,21 @@ namespace WrathScalingItemDCs.Settings
             if (!File.Exists(path))
             {
                 _instance = new GlobalSettings();
+                _instance.Save();
                 return;
             }
 
             try
             {
                 var json = File.ReadAllText(path);
+
+                if (json == null || !json.Contains($"\"SettingsVersion\": \"{SettingsVersion}\","))
+                {
+                    _instance = new GlobalSettings();
+                    _instance.Save();
+                    return;
+                }
+
                 _instance = JsonConvert.DeserializeObject<GlobalSettings>(json);
 
                 if (_instance != null)
@@ -112,12 +130,12 @@ namespace WrathScalingItemDCs.Settings
         {
             var path = Path.Combine(Main.ModEntry.Path, FILENAME);
 
-            if (_instance.CurrentSetting.GetType() == typeof(ScaleSettingPercent))
-                _instance.CurrentSettingType = typeof(ScaleSettingPercent);
-            else if (_instance.CurrentSetting.GetType() == typeof(ScaleSettingFlat))
-                _instance.CurrentSettingType = typeof(ScaleSettingFlat);
-            else if (_instance.CurrentSetting.GetType() == typeof(ScaleSettingDiminishingReturns))
-                _instance.CurrentSettingType = typeof(ScaleSettingDiminishingReturns);
+            //if (_instance.CurrentSetting.GetType() == typeof(ScaleSettingPercent))
+            //    _instance.CurrentSettingType = typeof(ScaleSettingPercent);
+            //else if (_instance.CurrentSetting.GetType() == typeof(ScaleSettingFlat))
+            //    _instance.CurrentSettingType = typeof(ScaleSettingFlat);
+            //else if (_instance.CurrentSetting.GetType() == typeof(ScaleSettingDiminishingReturns))
+            //    _instance.CurrentSettingType = typeof(ScaleSettingDiminishingReturns);
 
             var json = JsonConvert.SerializeObject(_instance, Formatting.Indented, _jsonSettings);
             File.WriteAllText(path, json);
