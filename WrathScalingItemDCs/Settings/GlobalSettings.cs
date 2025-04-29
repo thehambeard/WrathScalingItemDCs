@@ -2,9 +2,6 @@
 using System;
 using System.IO;
 using WrathHamCore.Utility.Initialization;
-using UniRx;
-using WrathScalingItemDCs.ScalingDC.CSAPM;
-using System.CodeDom;
 
 namespace WrathScalingItemDCs.Settings
 {
@@ -140,7 +137,7 @@ namespace WrathScalingItemDCs.Settings
             var json = JsonConvert.SerializeObject(_instance, Formatting.Indented, _jsonSettings);
             File.WriteAllText(path, json);
 
-            CSAPMCollection.Instance.ApplyMods();
+            //CSAPMCollection.Instance.ApplyMods();
         }
     }
 }

@@ -1,16 +1,10 @@
 ﻿#if DEBUG
 using Kingmaker.Blueprints;
-using Kingmaker.Blueprints.Items;
-using Kingmaker.Blueprints.Items.Armors;
-using Kingmaker.Blueprints.Items.Ecnchantments;
 using Kingmaker.Blueprints.Items.Equipment;
-using Kingmaker.Blueprints.Items.Shields;
-using Kingmaker.Blueprints.Items.Weapons;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using WrathHamCore.Utility.Extensions;
 using WrathHamCore.Utility.WrathTools;
-using WrathScalingItemDCs.ScalingDC.CSAPM;
 
 namespace WrathScalingItemDCs.ScalingDC.Debug;
 
@@ -22,29 +16,37 @@ internal class FindAllItems
 
         while ((bps = BlueprintLoader.Shared.GetBlueprints()) == null) { }
 
-        foreach (var bp in bps
-            .Where(bp => bp is BlueprintItemWeapon 
-                || bp is BlueprintItemArmor
-                || bp is BlueprintItemShield)
-            .Cast<BlueprintItemEquipment>())
-            foreach (var enchant in bp.Enchantments)
-                foreach (var csap in enchant.GetContextSetAbilityParams())
-                    CSAPMCollection.Instance.CreateAndAdd(bp, GetValidKeys(enchant, bp));
+        int count = 0;
 
-        CSAPMCollection.Instance.Save();
-    }
+        foreach (var bp in bps.OfType<BlueprintItemEquipment>().OrderBy(x => x.Name))
+        {
+            try
+            {
+                if (bp is BlueprintItemEquipmentUsable usable &&
+                    (
+                        usable.Type == UsableItemType.Wand ||
+                        usable.Type == UsableItemType.Scroll ||
+                        usable.Type == UsableItemType.Potion
+                    ))
+                    continue;
 
-    private static List<string> GetValidKeys(BlueprintItemEnchantment enchantment, BlueprintItemEquipment item)
-    {
-        List<string> keys = [];
+                if (ScalingDCModel.TryCreate(bp, out var scalingDCModel))
+                {
+                    Main.Logger.Debug($"{bp.Name} {bp.name}: {bp.AssetGuidThreadSafe}");
+                    ScalingDCCollection.Instance.Add(scalingDCModel.ItemAssetId, scalingDCModel);
+                    count++;
+                }
+            }
+            catch (Exception ex)
+            {
+                Main.Logger.Error($"Error: {bp.AssetGuid}");
+                Main.Logger.Error(ex);
+            }
+        }
 
-        if (!string.IsNullOrEmpty(enchantment.m_Description?.GetActualKey()))
-            keys.Add(enchantment.m_Description.GetActualKey());
+        ScalingDCCollection.Instance.Save();
 
-        if (!string.IsNullOrEmpty(item.m_DescriptionText?.GetActualKey()))
-            keys.Add(item.m_DescriptionText.GetActualKey());
-
-        return keys;
+        Main.Logger.Log($"Found {count} instances.");
     }
 }
 #endif

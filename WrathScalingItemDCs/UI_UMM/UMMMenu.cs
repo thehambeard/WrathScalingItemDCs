@@ -1,8 +1,4 @@
-﻿using Kingmaker.UI.MVVM._ConsoleView.InGame;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
+﻿using System;
 using UnityModManagerNet;
 using WrathHamCore.Utility.Initialization;
 #if DEBUG
@@ -64,25 +60,25 @@ public static class UMMMenu
 
     private static void OnGUIFlatBase()
     {
-        
+
 
         using (new GL.VerticalScope())
         {
             GL.Label("Flat");
             GL.Label("This setting will add a flat modifier to the original DC");
-            DrawDifficultySetting(ScaleSettingPreset.Preset1, 
+            DrawDifficultySetting(ScaleSettingPreset.Preset1,
                 GlobalSettings.Instance.ScaleSettingFlat,
-                ref GlobalSettings.Instance.ScaleSettingFlat.Preset1, 
+                ref GlobalSettings.Instance.ScaleSettingFlat.Preset1,
                 int.TryParse);
-            DrawDifficultySetting(ScaleSettingPreset.Preset2, 
+            DrawDifficultySetting(ScaleSettingPreset.Preset2,
                 GlobalSettings.Instance.ScaleSettingFlat,
-                ref GlobalSettings.Instance.ScaleSettingFlat.Preset2, 
+                ref GlobalSettings.Instance.ScaleSettingFlat.Preset2,
                 int.TryParse);
-            DrawDifficultySetting(ScaleSettingPreset.Preset3, 
+            DrawDifficultySetting(ScaleSettingPreset.Preset3,
                 GlobalSettings.Instance.ScaleSettingFlat,
-                ref GlobalSettings.Instance.ScaleSettingFlat.Preset3, 
+                ref GlobalSettings.Instance.ScaleSettingFlat.Preset3,
                 int.TryParse);
-            
+
 
             for (int i = 10; i < 35; i += 5)
             {
@@ -139,7 +135,7 @@ public static class UMMMenu
 
     private static void OnGUIDiminishReturn()
     {
-        
+
 
         using (new GL.VerticalScope())
         {
@@ -148,21 +144,21 @@ public static class UMMMenu
             DrawDifficultySettingTuple(
                 ScaleSettingPreset.Preset1,
                 GlobalSettings.Instance.ScaleSettingDiminishingReturns,
-                ref GlobalSettings.Instance.ScaleSettingDiminishingReturns.Preset1, 
+                ref GlobalSettings.Instance.ScaleSettingDiminishingReturns.Preset1,
                 float.TryParse);
-            
+
             DrawDifficultySettingTuple(
                 ScaleSettingPreset.Preset2,
                 GlobalSettings.Instance.ScaleSettingDiminishingReturns,
-                ref GlobalSettings.Instance.ScaleSettingDiminishingReturns.Preset2, 
+                ref GlobalSettings.Instance.ScaleSettingDiminishingReturns.Preset2,
                 float.TryParse);
-            
+
             DrawDifficultySettingTuple(
                 ScaleSettingPreset.Preset3,
                 GlobalSettings.Instance.ScaleSettingDiminishingReturns,
-                ref GlobalSettings.Instance.ScaleSettingDiminishingReturns.Preset3, 
+                ref GlobalSettings.Instance.ScaleSettingDiminishingReturns.Preset3,
                 float.TryParse);
-            
+
 
             for (int i = 10; i < 35; i += 5)
             {
@@ -181,7 +177,7 @@ public static class UMMMenu
         }
     }
 
-    
+
 
     private static void DrawDCColumn<T>(int dcValue, Func<int, T, object> calculateDC, T preset)
     {
@@ -205,7 +201,7 @@ public static class UMMMenu
         }
     }
 
-    private static void DrawDifficultySettingTuple<T>(ScaleSettingPreset scaleSettingPreset, IScaleSetting presetObject , ref (T, T, T) presetValue, TryParseHandler<T> tryParse)
+    private static void DrawDifficultySettingTuple<T>(ScaleSettingPreset scaleSettingPreset, IScaleSetting presetObject, ref (T, T, T) presetValue, TryParseHandler<T> tryParse)
     {
         using (new GL.HorizontalScope())
         {
@@ -247,7 +243,6 @@ public static class UMMMenu
 
             if (GL.Button("Dump Items", GL.Width(200)))
                 FindAllItems.Dump();
-
         }
 
         OnGUI(modEntry);

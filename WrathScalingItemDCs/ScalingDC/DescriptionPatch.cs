@@ -1,10 +1,7 @@
 ﻿using HarmonyLib;
-using Kingmaker;
-using Kingmaker.GameModes;
 using Kingmaker.Localization;
 using Kingmaker.Localization.Shared;
 using System.Linq;
-using WrathScalingItemDCs.ScalingDC.CSAPM;
 
 namespace WrathScalingItemDCs.ScalingDC
 {
@@ -15,8 +12,8 @@ namespace WrathScalingItemDCs.ScalingDC
         [HarmonyPostfix]
         private static void PatchGetText(ref string __result, LocalizedString __instance, LocalizationPack pack, Locale locale)
         {
-            var csapmData = CSAPMCollection.Instance?.ModdedBlueprints.Where(x => x.LocalizationKeys.Contains(__instance.GetActualKey())).FirstOrDefault();
-            
+            var csapmData = ScalingDCCollection.Instance?.ModdedBlueprints.Where(x => x.LocalizationKeys.Contains(__instance.GetActualKey())).FirstOrDefault();
+
             if (csapmData == null)
                 return;
 

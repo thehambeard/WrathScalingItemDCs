@@ -1,8 +1,4 @@
-﻿using Kingmaker.Settings;
-using System;
-using UnityEngine;
-
-namespace WrathScalingItemDCs.Settings
+﻿namespace WrathScalingItemDCs.Settings
 {
     public interface IScaleSetting
     {
@@ -85,7 +81,7 @@ namespace WrathScalingItemDCs.Settings
             return result;
         }
 
-        public static int Percentage (int inputValue, float percentage) =>
+        public static int Percentage(int inputValue, float percentage) =>
             (int)(inputValue + (inputValue * percentage));
     }
 
@@ -111,10 +107,10 @@ namespace WrathScalingItemDCs.Settings
         {
             return (int)(inputValue + ((inputValue + b) / (inputValue * a) + c));
         }
-        
+
         public static int DiminishingReturns(int inputValue, (double a, double b, double c) values) =>
             DiminishingReturns(inputValue, values.a, values.b, values.c);
-        
+
 
 
     }
