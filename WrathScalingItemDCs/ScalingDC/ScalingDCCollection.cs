@@ -43,12 +43,14 @@ namespace WrathScalingItemDCs.ScalingDC
 
         public void AddFromExternalMod(BlueprintItemEquipment blueprint)
         {
-            if (ScalingDCModel.TryCreate(blueprint, out var newModel))
+            if (ScalingDCModel.TryCreate(blueprint, out var newModel, true))
             {
                 if (IsLoaded)
                     _moddedBlueprints.Add(blueprint.AssetGuidThreadSafe, newModel);
                 else
                     _queuedBlueprints.Add(blueprint.AssetGuidThreadSafe, newModel);
+
+                newModel.ApplyMod();
             }
         }
 
