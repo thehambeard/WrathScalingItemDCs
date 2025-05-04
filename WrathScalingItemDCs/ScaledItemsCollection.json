@@ -223,6 +223,13 @@
       "b79202a4-e64a-4d09-bb8f-48b27742db2c"
     ]
   },
+  "eec102a79c0fc0547a5da5a01d45cac7": {
+    "Name": "SarenraeObliteratingLightLightShieldItem",
+    "ItemAssetId": "eec102a79c0fc0547a5da5a01d45cac7",
+    "LocalizationKeys": [
+      "05a764d3-bed0-4aee-8501-acfccb7e9f90"
+    ]
+  },
   "71bb275ec1b130f4e857ea001582dd17": {
     "Name": "BlizzardTouchItem",
     "ItemAssetId": "71bb275ec1b130f4e857ea001582dd17",
@@ -283,22 +290,10 @@
     "ItemAssetId": "11e350708227f3b4eaf641a5b5fd2863",
     "LocalizationKeys": []
   },
-  "401a40d73744474c9947a486451de7ea": {
-    "Name": "BotomlessMug",
-    "ItemAssetId": "401a40d73744474c9947a486451de7ea",
-    "LocalizationKeys": []
-  },
   "65a835f0873ff0b428d4a91133ab94df": {
     "Name": "BoundThunder",
     "ItemAssetId": "65a835f0873ff0b428d4a91133ab94df",
     "LocalizationKeys": []
-  },
-  "f96e68cd34d9f6340ad6a49e0477fce7": {
-    "Name": "BracersOfBalanceItem",
-    "ItemAssetId": "f96e68cd34d9f6340ad6a49e0477fce7",
-    "LocalizationKeys": [
-      "29a4d092-67f2-40dd-8529-55d381505817"
-    ]
   },
   "cb7f21a7624e4697827698f0ba629e68": {
     "Name": "DLC3_BracersOfBraveryItem",
@@ -491,11 +486,6 @@
       "51c2a5d1-c57a-4013-a26b-451c9b6750c3"
     ]
   },
-  "a2fe8669436c4168bd0084e96eb44f09": {
-    "Name": "SacredStatuetteItem",
-    "ItemAssetId": "a2fe8669436c4168bd0084e96eb44f09",
-    "LocalizationKeys": []
-  },
   "c76deb732d037024a98fb5aa549df478": {
     "Name": "ConcentratedAcidFlask",
     "ItemAssetId": "c76deb732d037024a98fb5aa549df478",
@@ -525,11 +515,40 @@
     "ItemAssetId": "6b6a3c02cd90d3546bb853e786d8a7eb",
     "LocalizationKeys": []
   },
+  "54a610357a883654c9046156de001abe": {
+    "Name": "ChimeraRoughPowerClubItem",
+    "ItemAssetId": "54a610357a883654c9046156de001abe",
+    "LocalizationKeys": [
+      "f670d84f-7f6b-4b2c-83be-852e9de835dd"
+    ]
+  },
+  "472ac0ac346ea604a8207372710af1d7": {
+    "Name": "ChimeraRoughPowerFlailItem",
+    "ItemAssetId": "472ac0ac346ea604a8207372710af1d7",
+    "LocalizationKeys": [
+      "f670d84f-7f6b-4b2c-83be-852e9de835dd"
+    ]
+  },
   "a074b8cc7a0fa0940ad6bc8bec1be8de": {
     "Name": "DaggerOfFateSecondItem",
     "ItemAssetId": "a074b8cc7a0fa0940ad6bc8bec1be8de",
     "LocalizationKeys": [
       "b81765cb-3be9-4ec5-ba18-aaaefa6babf1"
+    ]
+  },
+  "04eafdb929b10e749b71f28f07b6b79b": {
+    "Name": "CrushingBurdenItem",
+    "ItemAssetId": "04eafdb929b10e749b71f28f07b6b79b",
+    "LocalizationKeys": [
+      "7855ccdc-cfe9-463e-8c06-73e55854f1f3"
+    ]
+  },
+  "3208b2ba64099784c9bea697663106d2": {
+    "Name": "CrushingBurdenSecondItem",
+    "ItemAssetId": "3208b2ba64099784c9bea697663106d2",
+    "LocalizationKeys": [
+      "5cfe270c-47f9-4cfc-87d2-3afe63027406",
+      "7855ccdc-cfe9-463e-8c06-73e55854f1f3"
     ]
   },
   "835d2e861aef0dd4fb21df9700074edc": {
@@ -555,6 +574,7 @@
     "Name": "DecayingDaggerItem",
     "ItemAssetId": "1c54a278449baf045800cd1e97a912a5",
     "LocalizationKeys": [
+      "544c7281-db97-4002-be0b-0befed0ac3a4",
       "db1cc5e2-91a8-48f9-a820-1434212538c5"
     ]
   },
@@ -564,11 +584,6 @@
     "LocalizationKeys": [
       "206af208-8a50-4576-ae46-868e53033d4c"
     ]
-  },
-  "15acf7ada5903ec429f7cd62a6162613": {
-    "Name": "CursedDelameresBowItem",
-    "ItemAssetId": "15acf7ada5903ec429f7cd62a6162613",
-    "LocalizationKeys": []
   },
   "ac131ab5acdcfdf4b8ff7cbc9cd49797": {
     "Name": "DetainerItem",
@@ -722,13 +737,6 @@
       "e66e52e6-a415-4ba6-9ad9-7f9d53e0481f"
     ]
   },
-  "372aae7b04ff4dd438ef3a8f881d5b17": {
-    "Name": "FaithBearerItem",
-    "ItemAssetId": "372aae7b04ff4dd438ef3a8f881d5b17",
-    "LocalizationKeys": [
-      "8b0ddecb-5182-447a-bf2f-c3d8c08f2e63"
-    ]
-  },
   "05550fe34742a344c968839ba9e5284a": {
     "Name": "FieryEyeItem",
     "ItemAssetId": "05550fe34742a344c968839ba9e5284a",
@@ -810,14 +818,6 @@
     "ItemAssetId": "9628598182b76784e975ce8486b2c944",
     "LocalizationKeys": []
   },
-  "5b4f6f18b0664964f83705a163244283": {
-    "Name": "GentlePersuasion",
-    "ItemAssetId": "5b4f6f18b0664964f83705a163244283",
-    "LocalizationKeys": [
-      "ae35844b-9933-4833-a935-2514e64c17dc",
-      "75f9df7e-87db-4b14-8f35-d0a1c33327f1"
-    ]
-  },
   "39df7eba02261244d93a1afe5c521afe": {
     "Name": "GhostTouchIgnitingShortswordPlus3Item",
     "ItemAssetId": "39df7eba02261244d93a1afe5c521afe",
@@ -833,11 +833,6 @@
   "8b3521fdebc83a149a1fe766cdb52610": {
     "Name": "GoldenThreadHeadbandItem",
     "ItemAssetId": "8b3521fdebc83a149a1fe766cdb52610",
-    "LocalizationKeys": []
-  },
-  "a2206ab9a731411dbe5055ab48175a22": {
-    "Name": "GorgonBelt",
-    "ItemAssetId": "a2206ab9a731411dbe5055ab48175a22",
     "LocalizationKeys": []
   },
   "681e835150a1d3b4581b26bc074a1a46": {
@@ -915,6 +910,7 @@
     "Name": "HeartOfIce_Item",
     "ItemAssetId": "a113c68406d74e37951717e417840bfa",
     "LocalizationKeys": [
+      "7a6f99c9-2bc8-420f-9f92-70ee31d183fa",
       "2d7142d2-a8ab-442e-a471-5a8d22b319cd"
     ]
   },
@@ -1062,9 +1058,19 @@
       "0072d0d5-df18-41c4-8d86-d84b434cb401"
     ]
   },
+  "c86cf926c8fbaad4594fabea815a4f13": {
+    "Name": "LightShieldOfCursedAllegianceArmorItem",
+    "ItemAssetId": "c86cf926c8fbaad4594fabea815a4f13",
+    "LocalizationKeys": []
+  },
   "12b8d86d38bf5fc48a86e924af760e98": {
     "Name": "GowrowSonicSpikedLightShieldArmorItem",
     "ItemAssetId": "12b8d86d38bf5fc48a86e924af760e98",
+    "LocalizationKeys": []
+  },
+  "4f0781a1b6881a74cbc6a5b150196df3": {
+    "Name": "SarenraeObliteratingLightLightShieldArmorItem",
+    "ItemAssetId": "4f0781a1b6881a74cbc6a5b150196df3",
     "LocalizationKeys": []
   },
   "ddab110b30173b845af7b654dce4b653": {
@@ -1072,10 +1078,24 @@
     "ItemAssetId": "ddab110b30173b845af7b654dce4b653",
     "LocalizationKeys": []
   },
+  "9b7d50142e4c8cd40862fd1bd64b99fe": {
+    "Name": "LightShieldOfCursedAllegianceShieldItem",
+    "ItemAssetId": "9b7d50142e4c8cd40862fd1bd64b99fe",
+    "LocalizationKeys": [
+      "dff1c12d-9b31-44d6-8ce5-74bea1568141"
+    ]
+  },
   "77bfc25b7f08e044d9ce73b76c332651": {
     "Name": "GozrehsEmbracementBeltItem",
     "ItemAssetId": "77bfc25b7f08e044d9ce73b76c332651",
     "LocalizationKeys": []
+  },
+  "47c92da3d94941e438afd613b7b7eab1": {
+    "Name": "KnightsEmblemChainmail_IntermediateItem",
+    "ItemAssetId": "47c92da3d94941e438afd613b7b7eab1",
+    "LocalizationKeys": [
+      "09f2d8ca-3b95-4702-b857-f4d0f613fa14"
+    ]
   },
   "d1a7c882c2f56f2439d9278440153fe8": {
     "Name": "LivingRamItem",
@@ -1096,13 +1116,6 @@
       "f85a69e4-d788-4283-b2f2-5842461770b1"
     ]
   },
-  "7c30287784334774bdd0a971b5473744": {
-    "Name": "AnimatedWeapon_PoisonedLongswordItem",
-    "ItemAssetId": "7c30287784334774bdd0a971b5473744",
-    "LocalizationKeys": [
-      "46aaa085-17ba-42ba-b161-5efe2bf78894"
-    ]
-  },
   "5a1f85a6539b3ee479a0ec6e7a42dae8": {
     "Name": "TheFlashingGreatswordItem",
     "ItemAssetId": "5a1f85a6539b3ee479a0ec6e7a42dae8",
@@ -1121,6 +1134,13 @@
     "Name": "KnightsEmblemSunsetShortswordItem",
     "ItemAssetId": "0b650c5561c1a5644806a0317d694ca4",
     "LocalizationKeys": []
+  },
+  "fde498ce6b3542042a7dbb71efe62370": {
+    "Name": "KnightsEmblemEmeraldChainmailItem",
+    "ItemAssetId": "fde498ce6b3542042a7dbb71efe62370",
+    "LocalizationKeys": [
+      "09f2d8ca-3b95-4702-b857-f4d0f613fa14"
+    ]
   },
   "699d16a646c91884daddab70a42aec8a": {
     "Name": "KnightsEmblemEmeraldShortswordItem",
@@ -1223,6 +1243,20 @@
       "7fee872c-ad8c-4529-a098-13f805d6a15e"
     ]
   },
+  "3522da20bbde3ff43a19990c64533fd8": {
+    "Name": "NaturesAgonyItem",
+    "ItemAssetId": "3522da20bbde3ff43a19990c64533fd8",
+    "LocalizationKeys": [
+      "c4ff2b53-30d8-40d0-94dc-01efba348052"
+    ]
+  },
+  "15f6d8a58a6747a40af41df51131c135": {
+    "Name": "NaturesCholerItem",
+    "ItemAssetId": "15f6d8a58a6747a40af41df51131c135",
+    "LocalizationKeys": [
+      "dc992425-779f-49c1-b556-6fbd4bb01f1e"
+    ]
+  },
   "e9550e8e58b4afd488a6fe9e39224319": {
     "Name": "StarbladeItem",
     "ItemAssetId": "e9550e8e58b4afd488a6fe9e39224319",
@@ -1264,76 +1298,6 @@
   "edab1a1ee8654810aca64df16dd87aae": {
     "Name": "DLC5_PearlOfPowerFirstLevelItem",
     "ItemAssetId": "edab1a1ee8654810aca64df16dd87aae",
-    "LocalizationKeys": []
-  },
-  "15920d47a9e64669936e3c2030a6095d": {
-    "Name": "DLC5_PearlOfPowerFirstLevelDoubleItem",
-    "ItemAssetId": "15920d47a9e64669936e3c2030a6095d",
-    "LocalizationKeys": []
-  },
-  "f548bd21606344f0963c0ae374946d39": {
-    "Name": "DLC5_PearlOfPowerSecondLevelItem",
-    "ItemAssetId": "f548bd21606344f0963c0ae374946d39",
-    "LocalizationKeys": []
-  },
-  "d390ae6685094218b1abd48919b73764": {
-    "Name": "DLC5_PearlOfPowerSecondLevelDoubleItem",
-    "ItemAssetId": "d390ae6685094218b1abd48919b73764",
-    "LocalizationKeys": []
-  },
-  "d2d4b585db9f43698d183437f20bd8de": {
-    "Name": "DLC5_PearlOfPowerThirdLevelItem",
-    "ItemAssetId": "d2d4b585db9f43698d183437f20bd8de",
-    "LocalizationKeys": []
-  },
-  "7c861deccf5640f0a99bf0c034231465": {
-    "Name": "DLC5_PearlOfPowerThirdLevelDoubleItem",
-    "ItemAssetId": "7c861deccf5640f0a99bf0c034231465",
-    "LocalizationKeys": []
-  },
-  "54cbc6480de54d49b277d2686a98b4fb": {
-    "Name": "DLC5_PearlOfPowerFourthLevelItem",
-    "ItemAssetId": "54cbc6480de54d49b277d2686a98b4fb",
-    "LocalizationKeys": []
-  },
-  "2fe3c072b1054fbea6019c5b5db41403": {
-    "Name": "DLC5_PearlOfPowerFourthLevelDoubleItem",
-    "ItemAssetId": "2fe3c072b1054fbea6019c5b5db41403",
-    "LocalizationKeys": []
-  },
-  "3f3aa97c9a1c46d5a8b3a3c22a5727db": {
-    "Name": "DLC5_PearlOfPowerFithLevelItem",
-    "ItemAssetId": "3f3aa97c9a1c46d5a8b3a3c22a5727db",
-    "LocalizationKeys": []
-  },
-  "2de5a759c20544a0abaf04576e9e49f7": {
-    "Name": "DLC5_PearlOfPowerFithLevelDoubleItem",
-    "ItemAssetId": "2de5a759c20544a0abaf04576e9e49f7",
-    "LocalizationKeys": []
-  },
-  "8103f79802eb4ec59c373829ff5907a1": {
-    "Name": "DLC5_PearlOfPowerSixthLevelItem",
-    "ItemAssetId": "8103f79802eb4ec59c373829ff5907a1",
-    "LocalizationKeys": []
-  },
-  "6bc4f0bc278f48dd85821e3913ccffb5": {
-    "Name": "DLC5_PearlOfPowerSixthLevelDoubleItem",
-    "ItemAssetId": "6bc4f0bc278f48dd85821e3913ccffb5",
-    "LocalizationKeys": []
-  },
-  "778b25032e7343ba856326bf7f3dfeab": {
-    "Name": "DLC5_PearlOfPowerSeventhLevelItem",
-    "ItemAssetId": "778b25032e7343ba856326bf7f3dfeab",
-    "LocalizationKeys": []
-  },
-  "d0552e5dd29d49568cebfb8fd2335486": {
-    "Name": "DLC5_PearlOfPowerEighthLevelItem",
-    "ItemAssetId": "d0552e5dd29d49568cebfb8fd2335486",
-    "LocalizationKeys": []
-  },
-  "4e98e92f49024c529cb2afa01fc63b0e": {
-    "Name": "DLC5_PearlOfPowerNinthLevelItem",
-    "ItemAssetId": "4e98e92f49024c529cb2afa01fc63b0e",
     "LocalizationKeys": []
   },
   "72c65ae66207616499c99e7914682a58": {
@@ -1406,6 +1370,23 @@
     "ItemAssetId": "dfe9839fab2afe846b6c8c4acde1b19d",
     "LocalizationKeys": []
   },
+  "c65c04b0a6e7b0347bb1a04816c2e74f": {
+    "Name": "CursedThornArrowsQuiverItem",
+    "ItemAssetId": "c65c04b0a6e7b0347bb1a04816c2e74f",
+    "LocalizationKeys": [
+      "6870ab38-14b7-4e27-8dae-0342d6018a68"
+    ]
+  },
+  "059441667d95ad140924a36452799a3c": {
+    "Name": "LoversArrowsQuiverItem",
+    "ItemAssetId": "059441667d95ad140924a36452799a3c",
+    "LocalizationKeys": []
+  },
+  "911d0f8cad672454a94286a9feafc360": {
+    "Name": "WeakenArrowsQuiverItem",
+    "ItemAssetId": "911d0f8cad672454a94286a9feafc360",
+    "LocalizationKeys": []
+  },
   "6fbf1d1001da4d04f907794c50262ae9": {
     "Name": "RabidRippersItem",
     "ItemAssetId": "6fbf1d1001da4d04f907794c50262ae9",
@@ -1431,7 +1412,15 @@
     "Name": "RedDragonHelmetItem",
     "ItemAssetId": "e6b06daad1ed43cea2eb80f2eb93bfce",
     "LocalizationKeys": [
+      "eb607beb-35f2-4469-8de0-4be58996d83b",
       "76d2b033-f65c-4599-b412-9822ae181f5a"
+    ]
+  },
+  "7932e66d4eaa7ff43a4f8bae6bab13ff": {
+    "Name": "RepellingBracersItem",
+    "ItemAssetId": "7932e66d4eaa7ff43a4f8bae6bab13ff",
+    "LocalizationKeys": [
+      "58e6f383-5947-4aab-a027-ee5faee75724"
     ]
   },
   "a1c498e8e3e640deb5eb6d888e229565": {
@@ -1483,6 +1472,13 @@
     "ItemAssetId": "24542aceda6747ad80ed9566ff715ffa",
     "LocalizationKeys": []
   },
+  "cfc64eff4b9ddef46b8eb0edd411466f": {
+    "Name": "RollingThunderItem",
+    "ItemAssetId": "cfc64eff4b9ddef46b8eb0edd411466f",
+    "LocalizationKeys": [
+      "ad5e687c-5d9c-4ce6-a9be-d9b7944ba71b"
+    ]
+  },
   "69e9559be15752d4093aa84e77f57e55": {
     "Name": "RudeStopperItem",
     "ItemAssetId": "69e9559be15752d4093aa84e77f57e55",
@@ -1502,18 +1498,25 @@
     "ItemAssetId": "dd4439b4397d42448644cd2a90b4c390",
     "LocalizationKeys": []
   },
-  "4e82b54975834f14b81814e9255873e3": {
-    "Name": "RustedDawnItem",
-    "ItemAssetId": "4e82b54975834f14b81814e9255873e3",
-    "LocalizationKeys": [
-      "2b8f5805-fe12-4401-b6d9-4e91afd3e8b9"
-    ]
-  },
   "9d1d010681dd791449a1b1b88766da82": {
     "Name": "RuthlessAssaultItem",
     "ItemAssetId": "9d1d010681dd791449a1b1b88766da82",
     "LocalizationKeys": [
       "5b0d2231-6c69-4dc4-89e0-eb4623de0608"
+    ]
+  },
+  "a0cde64ee1853da499c9a863091754b4": {
+    "Name": "SarenraeObliteratingLightScalemailItem",
+    "ItemAssetId": "a0cde64ee1853da499c9a863091754b4",
+    "LocalizationKeys": [
+      "7e08da00-7922-4479-83c9-b388f88bc3ec"
+    ]
+  },
+  "85e44d5153e14fc45ac52bf3228fa1b7": {
+    "Name": "SarenraeObliteratingLightHeavyFlailItem",
+    "ItemAssetId": "85e44d5153e14fc45ac52bf3228fa1b7",
+    "LocalizationKeys": [
+      "a37967f4-01c5-4e35-a2bd-89a38fe6a7a5"
     ]
   },
   "b439462e8bb5bfc47a45e0874b94ee62": {
@@ -1577,11 +1580,32 @@
       "a1088dfd-cd51-4ef2-ad5d-921dae737206"
     ]
   },
+  "ac47a701c6ea4d2e95d3e6eccf51d460": {
+    "Name": "ColorlessRemainsQuiver_SolidItem",
+    "ItemAssetId": "ac47a701c6ea4d2e95d3e6eccf51d460",
+    "LocalizationKeys": [
+      "52e75a42-98ad-4d5e-b934-03a26900dbf7"
+    ]
+  },
+  "692f4af5a7164f65afd34d2c3aa30c4d": {
+    "Name": "ColorlessRemainsBreastplate_MadnessItem",
+    "ItemAssetId": "692f4af5a7164f65afd34d2c3aa30c4d",
+    "LocalizationKeys": [
+      "aac4a3b7-3ed5-42cc-a4e7-e9c35328a834"
+    ]
+  },
   "5b2fa590883042948dcebfa162025ead": {
     "Name": "ColorlessRemainsGoggles_MadnessItem",
     "ItemAssetId": "5b2fa590883042948dcebfa162025ead",
     "LocalizationKeys": [
       "01f4773e-6fd8-4e00-9f5f-f36afb67c098"
+    ]
+  },
+  "61966e4661354cd4864b0a8942a50ec6": {
+    "Name": "ColorlessRemainsQuiver_MadnessItem",
+    "ItemAssetId": "61966e4661354cd4864b0a8942a50ec6",
+    "LocalizationKeys": [
+      "f49ec6f5-3194-4d93-8f3f-72136649b29d"
     ]
   },
   "4a7525548113cbc4c9e0721e2a51cae4": {
@@ -1639,6 +1663,7 @@
     "Name": "RovagugSpawnCloakItem",
     "ItemAssetId": "59f597dee4897064dbac47d71131bd34",
     "LocalizationKeys": [
+      "654aa4b5-4697-4485-9d17-5f6e133670e1",
       "1535a772-2bd1-442b-8017-706e532e4f5a"
     ]
   },
@@ -1760,11 +1785,6 @@
       "24e9b184-1d39-44b7-b4cc-845705e490cc"
     ]
   },
-  "2ede8fbd9b9a5784a8651f762e7c6f4e": {
-    "Name": "LilituTailWeapon",
-    "ItemAssetId": "2ede8fbd9b9a5784a8651f762e7c6f4e",
-    "LocalizationKeys": []
-  },
   "37ad1af13a5245d8a9da355d65143bf0": {
     "Name": "DLC5_TangibleShadow",
     "ItemAssetId": "37ad1af13a5245d8a9da355d65143bf0",
@@ -1799,6 +1819,13 @@
       "3e80e5e9-ef58-4f0b-a8e2-ebce22a9f735"
     ]
   },
+  "200833eb6efaf5f48828d65183eb28a1": {
+    "Name": "TheBlizItem",
+    "ItemAssetId": "200833eb6efaf5f48828d65183eb28a1",
+    "LocalizationKeys": [
+      "d47fd2e1-32b9-4b95-9892-00bf0f8963f5"
+    ]
+  },
   "e15b9c3ad2424b94f9fc7ea7f751ad38": {
     "Name": "TheCollapseItem",
     "ItemAssetId": "e15b9c3ad2424b94f9fc7ea7f751ad38",
@@ -1820,6 +1847,13 @@
       "0c20f661-2015-42fb-9164-f31fa6ace0b8"
     ]
   },
+  "c17f627fedd420d4aa871f23d0995fcf": {
+    "Name": "HeartOfIraItem",
+    "ItemAssetId": "c17f627fedd420d4aa871f23d0995fcf",
+    "LocalizationKeys": [
+      "24563319-1ac8-4756-ac6e-f0501b4e57d2"
+    ]
+  },
   "8dcda5c1220d177498aaf022395c44b5": {
     "Name": "TheIllustriousSweepItem",
     "ItemAssetId": "8dcda5c1220d177498aaf022395c44b5",
@@ -1832,6 +1866,13 @@
     "ItemAssetId": "a0582c1a5a4d2e744a67d7432f900195",
     "LocalizationKeys": [
       "efd4552e-214d-4f8b-9c05-105cb8b0053c"
+    ]
+  },
+  "6bbf04b71ee91734dab328837fc168cf": {
+    "Name": "SecretsOfSuramgaminNecklaceItem",
+    "ItemAssetId": "6bbf04b71ee91734dab328837fc168cf",
+    "LocalizationKeys": [
+      "54f2effa-11fe-4f4c-b0f0-0042bda673c7"
     ]
   },
   "9699071c8bf046bca5272d0a14b717e0": {
@@ -2004,6 +2045,13 @@
       "96d276f0-2618-49cd-a200-face1817073e"
     ]
   },
+  "417c8c47cbf244ef8f4a1e52bf92493d": {
+    "Name": "MaskOfAreshkagalHeadband_VoidItem",
+    "ItemAssetId": "417c8c47cbf244ef8f4a1e52bf92493d",
+    "LocalizationKeys": [
+      "887f7755-fa99-4ce9-a024-f9ea0b1de935"
+    ]
+  },
   "fc49c7b08e4b6164299297c81354139a": {
     "Name": "VoicesOfHollowItem",
     "ItemAssetId": "fc49c7b08e4b6164299297c81354139a",
@@ -2098,6 +2146,13 @@
     "ItemAssetId": "54ea8bc13e3de794a83587a134b74b2f",
     "LocalizationKeys": [
       "5a8742ac-17ef-4bc7-9124-08765f9773aa"
+    ]
+  },
+  "5e8470733b954db686cd2dbfaaf1f058": {
+    "Name": "WrathOfTheUndeadItem",
+    "ItemAssetId": "5e8470733b954db686cd2dbfaaf1f058",
+    "LocalizationKeys": [
+      "10430d29-5bcb-4c81-977e-286dfe1e4bd7"
     ]
   },
   "7d59c6aa14a741a89bdcd34ff89a4aba": {
